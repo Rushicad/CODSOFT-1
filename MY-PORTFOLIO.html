@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rushikesh Portfolio</title>
+</head>
+<body>
+ <!-- first we add Header to the page -->
+     
+    <header>
+        <nav class = "container">
+            <a href = "logo.png" class="logo">Rushii's Portfolio</a>
+            <ul class = "nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- now the main content -->
+      
+    <main>
+        <!-- hero sec -->
+          <section class="hero">
+            <div class="container">
+                <h1>Welcome to My Portfolio</h1>
+                <p class="tagline">Creative Developer | Problem Solver | Smart Solutions's</p>
+            </div>
+          </section>
+          <!-- about sec -->
+           <section id = "about" class ="section">
+            <div class="container">
+                <h2>About me</h2>
+                <div class="about-content">
+                    <div>
+                        <img src="my image.jpg" alt="profile photo" class = "profile-img">
+                    </div>
+                    <div class="bio">
+                        <p><b>Hello I'm a curious student and aspiring Web-Developer with a love for Python and solving problem's in web-development</b></p>
+
+                        <p>My journey in web development started with a        curiosity about how websites work, and has
+                            evolved into a career focused on creating digital solutions that make a difference. I love
+                            turning complex problems into simple, beautiful designs.</p>
+                        
+                        <p>Whn I'm not coding, you can find me exploring new techs, contributing to open-sourse projects, or enjoying a good cup of tea while planning my next creative venture.</p>
+                    </div>
+                </div>
+            </div>
+           </section>
+        <!-- skill sec -->
+            <section id="skills" class="section">
+                <dvi class="container">
+                    <h2>My Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <h3>Frontend Development</h3>
+                            <p>HTML, CSS, JavaScript</p>
+                        </div>
+                        <div class="skill-card">
+                            <h3>Development Tools</h3>
+                            <p>Git, Github, VS Code, Linux</p>
+                        </div>
+                        <div class="skill-card">
+                            <h3>Design Tools</h3>
+                            <p>Figma, Adobe XD, Photoshop, Illustrator</p>
+                        </div>
+                    </div>
+                </dvi>
+            </section>
+        <!-- project sec -->
+            <section id="projects" class="section">
+                <div class="container">
+                    <h2>My Project's</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-img">E-Commerce Platform</div>
+                            <div class="project-content">
+                                <h3 class="project-title">Modern E-Commerce site</h3>
+                                <p>Developed a full-stack, mobile-responsive e-commerce platform using <b>React</b> for the frontend and <b>Node.js</b> with <b>Express</b> for the backend, incorporating features like JWT-based user authentication, Stripe integration for payments, and dynamic inventory management.</p>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-img">Task Manager</div>
+                            <div class="project-content">
+                                <h3 class="project-title">Productivity</h3>
+                                <p>A comprehensive task management application featuring real-time collaboration, built with <b>Vue.js</b> and <b>Firebase</b> to deliver</p>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-img">Portfolio Web</div>
+                            <div class="project-content">
+                                <h3 class="project-title">Personal Portfolio</h3>
+                                <p>A stunning portfolio website for a digital artist, featuring smooth animaion's, intractive galleries, and optimized performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+        <!-- resume sec -->
+            <section  id ="resume"class="section">
+                <div class="container">
+                    <h2>Resume</h2>
+                    <div class="resume-content">
+                        <p>Download my resume to see my <b>experience</b>,<b>education</b>, <b>skills</b>, and <b>achievements</b></p>
+                        <a href="my resume.pdf" class ="download-btn">📄 Download Resume</a>
+                    </div>
+                </div>
+            </section>
+        <!-- contact sec -->
+            <section id ="contact" class ="section">
+                <div class="container">
+                    <h2>Get in Touch</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>📧 E-mail</h3>
+                            <a href="mailto:rushikeshc128@gmail.com" class="contact-link">Send Email</a>
+                        </div>
+                        <div class="contact-item">
+                            <h3>☎️Phone</h3>
+                            <p>Contact Us</p>
+                            <p><a href="tel:+91 93732 67747">+91 93732 67747</a></p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h3>🌐 LinkedIn</h3>
+                            <p><a href="https://www.linkedin.com/in/rushikesh-chavhan-123456789/">Visit My Profile</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+<!-- footer section of the page -->
+    <footer>
+        <div class="container">
+            <p>&copy;2025 Rushikesh Chavhan. | All rights reserved. | built with modern web technologies</p>
+        </div>
+    </footer>    
+    <script>
+        //for sooth scrolling nav
+        document.querySelectorAll('a[href^="3"]').forEach(anchor =>{
+            anchor.addEventListner('click', function(e){
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target){
+                    target.scrollIntoView({
+                        behavior:'smooth',
+                        block:'start'
+                    });
+                };
+            });
+        });
+
+        //for the scroll animation
+        const observationOptions= {
+            threshold:0.1,
+            rootMargin:'0px 0px -50% 0px'
+        };
+
+        const observer = new IntersectionObserver((entries)=>{
+            entries.forEach(entry=>{
+                if (entry.isIntersecting){
+                    entry.target.style.animation= 'fadeInUp 0.8s ease forwards';
+                }
+            });
+        }, observerOptions);
+        //observe all section for scroll animation
+        document.querySelectorAll('.section').forEach(section=>{
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
